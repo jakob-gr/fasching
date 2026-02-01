@@ -1,0 +1,32 @@
+{{if hasconfetti}}
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+(function () {
+  // Respect accessibility setting
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function run() {
+    if (typeof confetti !== 'function') return;
+    const duration = 2500;
+    const end = Date.now() + duration;
+    (function frame() {
+      confetti({
+        particleCount: 6,
+        startVelocity: 0,
+        ticks: 300,
+        gravity: 0.9,
+        spread: 70,
+        origin: { x: Math.random(), y: 0 }
+      });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    })();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();
+</script>
+{{end}}

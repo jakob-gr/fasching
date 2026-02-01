@@ -1,4 +1,5 @@
 @def title = "Party!"
+@def hasconfetti = true
 
 # Jakobs Faschingsparty
 
