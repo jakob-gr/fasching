@@ -11,8 +11,12 @@ Am 11. Februar von 14:30 bis 18:00
 
 Bei uns zu Hause
 
-## Wichtig!
+## Wie?
 
-Komm verkleidet!
+Verkleidet
+
+## Warum?
+
+So halt
 
 \circularimage{/assets/clown.jpg}{Hurra!}
